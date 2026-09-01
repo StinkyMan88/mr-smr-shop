@@ -9,7 +9,6 @@ const PRODUCTS = [
     brand: "Dior",
     category: "Sneakers",
     price: 59.90,
-    ref: "DIORB22-001",
     price: 29,
     ref: "smr-b22",
     images: [
