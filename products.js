@@ -13,35 +13,41 @@ const PRODUCTS = [
     price: 29.00,
     ref: "smr-B22",
     images: [
-      "assets/products/dior-b22.jpg",
-      "assets/placeholder.svg"
+      "products/dior-black.jpg",
+      "products/dior-white.png",
+      "products/dior-gray.png",
+      "products/dior-black-reflective.png"
     ],
     featured: true,
     date: "2026-09-01"
   },
   {
     id: "asics-gel-nyc-001",
-    name: "Gel-NYC",
+    name: "Asics Gel-NYC (1:1)",
     brand: "ASICS",
     category: "Sneakers",
-    price: 42.90,
-    ref: "ASICSNYC-001",
+    price: 45.00,
+    ref: "smr-ASGN11",
     images: [
-      "assets/products/asics-gel-nyc.jpg",
-      "assets/placeholder.svg"
+      "products/gelnycgray.webp",
+      "products/gelnycblue.webp",
+      "products/gelnycpink.webp",
+      "products/gelnycblack.webp",
+      "products/gelnycdarkgray.webp",
+      "products/gelnycgrayblack.webp"
     ],
     featured: true,
     date: "2026-08-30"
   },
   {
     id: "nike-p6000-001",
-    name: "P-6000",
+    name: "Nike P-6000",
     brand: "Nike",
     category: "Sneakers",
-    price: 34.90,
-    ref: "NIKEP6000-001",
+    price: 33.00,
+    ref: "smr-NKP6K",
     images: [
-      "assets/products/nike-p6000.jpg",
+      "products/nike-p6000.jpg",
       "assets/placeholder.svg"
     ],
     featured: false,
