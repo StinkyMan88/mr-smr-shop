@@ -9,6 +9,8 @@ const grid = document.getElementById("productGrid"),
 
 const modal = document.getElementById("productModal"),
   modalImage = document.getElementById("modalImage"),
+  prevImgBtn = document.getElementById("prevImgBtn"),
+  nextImgBtn = document.getElementById("nextImgBtn"),
   modalThumbnails = document.getElementById("modalThumbnails"),
   modalBrand = document.getElementById("modalBrand"),
   modalCategory = document.getElementById("modalCategory"),
@@ -19,6 +21,7 @@ const modal = document.getElementById("productModal"),
   toast = document.getElementById("toast");
 
 let currentProduct = null;
+let currentImageIndex = 0;
 
 document.getElementById("year").textContent = new Date().getFullYear();
 ["discordTop", "discordBottom", "modalDiscordButton"].forEach(id => {
@@ -112,14 +115,40 @@ function render() {
   });
 }
 
+function switchImage(index) {
+  if (!currentProduct) return;
+  let imgs = getProductImages(currentProduct);
+  if (imgs.length <= 1) return;
+
+  currentImageIndex = (index + imgs.length) % imgs.length;
+  let newImgSrc = imgs[currentImageIndex];
+  modalImage.src = newImgSrc;
+
+  // Update active thumbnail
+  const thumbs = modalThumbnails.querySelectorAll(".thumb-btn");
+  thumbs.forEach((btn, i) => {
+    btn.classList.toggle("active", i === currentImageIndex);
+  });
+}
+
 function openModal(p) {
   currentProduct = p;
+  currentImageIndex = 0;
   let imgs = getProductImages(p);
 
   // Set initial main image
   modalImage.src = imgs[0];
   modalImage.onerror = () => (modalImage.src = "assets/placeholder.svg");
   modalImage.alt = p.name;
+
+  // Setup navigation arrows
+  if (imgs.length > 1) {
+    if (prevImgBtn) prevImgBtn.classList.remove("hidden");
+    if (nextImgBtn) nextImgBtn.classList.remove("hidden");
+  } else {
+    if (prevImgBtn) prevImgBtn.classList.add("hidden");
+    if (nextImgBtn) nextImgBtn.classList.add("hidden");
+  }
 
   // Populate thumbnails
   modalThumbnails.innerHTML = "";
@@ -130,11 +159,7 @@ function openModal(p) {
       thumbBtn.type = "button";
       thumbBtn.className = `thumb-btn ${index === 0 ? "active" : ""}`;
       thumbBtn.innerHTML = `<img src="${esc(imgUrl)}" alt="${esc(p.name)} image ${index + 1}" onerror="this.src='assets/placeholder.svg'">`;
-      thumbBtn.onclick = () => {
-        modalImage.src = imgUrl;
-        modalThumbnails.querySelectorAll(".thumb-btn").forEach(btn => btn.classList.remove("active"));
-        thumbBtn.classList.add("active");
-      };
+      thumbBtn.onclick = () => switchImage(index);
       modalThumbnails.appendChild(thumbBtn);
     });
   } else {
@@ -174,14 +199,21 @@ async function copyRef() {
   setTimeout(() => toast.classList.remove("show"), 1800);
 }
 
+if (prevImgBtn) prevImgBtn.onclick = () => switchImage(currentImageIndex - 1);
+if (nextImgBtn) nextImgBtn.onclick = () => switchImage(currentImageIndex + 1);
+
 searchInput.oninput = render;
 brandFilter.onchange = render;
 categoryFilter.onchange = render;
 sortFilter.onchange = render;
 copyRefButton.onclick = copyRef;
 document.querySelectorAll("[data-close-modal]").forEach(x => (x.onclick = closeModal));
+
 document.onkeydown = e => {
+  if (modal.classList.contains("hidden")) return;
   if (e.key === "Escape") closeModal();
+  if (e.key === "ArrowLeft") switchImage(currentImageIndex - 1);
+  if (e.key === "ArrowRight") switchImage(currentImageIndex + 1);
 };
 
 populate();
