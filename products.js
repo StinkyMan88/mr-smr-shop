@@ -13,7 +13,7 @@ const PRODUCTS = [
     price: 29.00,
     ref: "smr-B22",
     images: [
-      "products/dior-black.jpg",
+      "main/products/dior-black.jpg",
       "products/dior-white.png",
       "products/dior-gray.png",
       "products/dior-black-reflective.png"
