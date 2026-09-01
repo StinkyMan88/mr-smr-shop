@@ -539,9 +539,23 @@ footer a:hover {
   border-color: var(--pink-primary);
 }
 
-.modal-image-wrap {
+.modal-gallery {
+  display: flex;
+  flex-direction: column;
   background: var(--pink-subtle);
-  min-height: 500px;
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+}
+
+.modal-image-wrap {
+  flex: 1;
+  min-height: 400px;
+  max-height: 460px;
+  background: var(--pink-subtle);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-image-wrap img {
@@ -549,6 +563,49 @@ footer a:hover {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: opacity 0.2s ease;
+}
+
+.modal-thumbnails {
+  display: flex;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.75);
+  border-top: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.thumb-btn {
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  padding: 0;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb-btn:hover {
+  border-color: var(--pink-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 42, 133, 0.2);
+}
+
+.thumb-btn.active {
+  border-color: var(--pink-primary);
+  box-shadow: 0 0 0 3px var(--pink-glow);
+  transform: scale(1.04);
 }
 
 .modal-info {
@@ -731,6 +788,10 @@ footer a:hover {
     grid-template-columns: 1fr;
     max-height: 90vh;
     overflow-y: auto;
+  }
+  .modal-gallery {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
   }
   .modal-image-wrap {
     min-height: 260px;
