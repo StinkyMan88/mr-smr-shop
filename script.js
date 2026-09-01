@@ -22,10 +22,10 @@ function getProductsList() {
 }
 
 function getProductImages(p) {
-  if (!p) return ["assets/placeholder.svg"];
+  if (!p) return ["./assets/placeholder.svg"];
   if (Array.isArray(p.images) && p.images.length > 0) return p.images;
   if (p.image) return [p.image];
-  return ["assets/placeholder.svg"];
+  return ["./assets/placeholder.svg"];
 }
 
 function populate() {
@@ -119,7 +119,7 @@ function render() {
     card.className = "product-card";
     card.innerHTML = `
       <div class="product-image">
-        <img src="${esc(mainImg)}" alt="${esc(p.name)}" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
+        <img src="${esc(mainImg)}" alt="${esc(p.name)}" loading="lazy" onerror="this.onerror=null;this.src='./assets/placeholder.svg'">
       </div>
       <div class="product-info">
         <div class="product-meta">
@@ -180,7 +180,7 @@ function openModal(p) {
     modalImage.src = imgs[0];
     modalImage.onerror = function() {
       this.onerror = null;
-      this.src = "assets/placeholder.svg";
+      this.src = "./assets/placeholder.svg";
     };
     modalImage.alt = p.name || "";
   }
@@ -201,7 +201,7 @@ function openModal(p) {
         let thumbBtn = document.createElement("button");
         thumbBtn.type = "button";
         thumbBtn.className = `thumb-btn ${index === 0 ? "active" : ""}`;
-        thumbBtn.innerHTML = `<img src="${esc(imgUrl)}" alt="${esc(p.name)} image ${index + 1}" onerror="this.onerror=null;this.src='assets/placeholder.svg'">`;
+        thumbBtn.innerHTML = `<img src="${esc(imgUrl)}" alt="${esc(p.name)} image ${index + 1}" onerror="this.onerror=null;this.src='./assets/placeholder.svg'">`;
         thumbBtn.onclick = () => switchImage(index);
         modalThumbnails.appendChild(thumbBtn);
       });
