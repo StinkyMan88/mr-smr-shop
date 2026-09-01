@@ -2,18 +2,16 @@
 // Each product can have:
 // - images: ["assets/products/image1.jpg", "assets/products/image2.jpg", ...] (First image is primary)
 // - OR image: "assets/products/image1.jpg" (for single image)
+
 const PRODUCTS = [
   {
     id: "dior-b22-001",
     name: "Dior B22",
     brand: "Dior",
     category: "Sneakers",
-    price: 59.90,
     price: 29,
     ref: "smr-b22",
     images: [
-      "assets/products/dior-b22.jpg",
-      "assets/placeholder.svg"
       "assets/products/dior-black.png",
       "assets/products/dior-black-reflective.png",
       "assets/products/dior-gray.png",
@@ -64,5 +62,4 @@ const PRODUCTS = [
     featured: false,
     date: "2026-08-25"
   }
-];
 ];
