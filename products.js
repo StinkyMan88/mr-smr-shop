@@ -1,9 +1,9 @@
 // ADD PRODUCTS HERE.
 // Each product can have:
-// - images: ["assets/products/image1.jpg", "assets/products/image2.jpg", ...] (First image is primary)
-// - OR image: "assets/products/image1.jpg" (for single image)
+// - images: ["assets/products/image1.png", "assets/products/image2.png", ...] (First image is primary)
+// - OR image: "assets/products/image1.png" (for single image)
 
-const PRODUCTS = [
+var PRODUCTS = [
   {
     id: "dior-b22-001",
     name: "Dior B22",
@@ -28,7 +28,6 @@ const PRODUCTS = [
     price: 42.90,
     ref: "ASICSNYC-001",
     images: [
-      "assets/products/asics-gel-nyc.jpg",
       "assets/placeholder.svg"
     ],
     featured: true,
@@ -42,7 +41,6 @@ const PRODUCTS = [
     price: 34.90,
     ref: "NIKEP6000-001",
     images: [
-      "assets/products/nike-p6000.jpg",
       "assets/placeholder.svg"
     ],
     featured: false,
@@ -56,10 +54,13 @@ const PRODUCTS = [
     price: 24.90,
     ref: "GUCCICAP-001",
     images: [
-      "assets/products/gucci-cap.jpg",
       "assets/placeholder.svg"
     ],
     featured: false,
     date: "2026-08-25"
   }
 ];
+
+if (typeof window !== "undefined") {
+  window.PRODUCTS = PRODUCTS;
+}
