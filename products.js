@@ -1,7 +1,7 @@
 // ADD PRODUCTS HERE.
 // Each product can have:
-// - images: ["assets/products/image1.png", "assets/products/image2.png", ...] (First image is primary)
-// - OR image: "assets/products/image1.png" (for single image)
+// - images: ["./assets/products/image1.png", "./assets/products/image2.png", ...] (First image is primary)
+// - OR image: "./assets/products/image1.png" (for single image)
 
 var PRODUCTS = [
   {
@@ -12,10 +12,10 @@ var PRODUCTS = [
     price: 29,
     ref: "smr-b22",
     images: [
-      "products/dior-black.png",
-      "products/dior-black-reflective.png",
-      "products/dior-gray.png",
-      "products/dior-white.png"
+      "./assets/products/dior-black.png",
+      "./assets/products/dior-black-reflective.png",
+      "./assets/products/dior-gray.png",
+      "./assets/products/dior-white.png"
     ],
     featured: true,
     date: "2026-09-01"
@@ -28,7 +28,12 @@ var PRODUCTS = [
     price: 42.90,
     ref: "ASICSNYC-001",
     images: [
-      "assets/placeholder.svg"
+      "./assets/products/gelnycblack.webp",
+      "./assets/products/gelnycblue.webp",
+      "./assets/products/gelnycdarkgray.webp",
+      "./assets/products/gelnycgray.webp",
+      "./assets/products/gelnycgrayblack.webp",
+      "./assets/products/gelnycpink.webp"
     ],
     featured: true,
     date: "2026-08-30"
@@ -41,7 +46,7 @@ var PRODUCTS = [
     price: 34.90,
     ref: "NIKEP6000-001",
     images: [
-      "assets/placeholder.svg"
+      "./assets/products/gelnycgray.webp"
     ],
     featured: false,
     date: "2026-08-28"
@@ -54,7 +59,7 @@ var PRODUCTS = [
     price: 24.90,
     ref: "GUCCICAP-001",
     images: [
-      "assets/placeholder.svg"
+      "./assets/products/gelnycblack.webp"
     ],
     featured: false,
     date: "2026-08-25"
