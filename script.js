@@ -1,36 +1,7 @@
 const DISCORD_TICKET_URL = "https://discord.com/channels/YOUR_SERVER_ID/YOUR_TICKET_CHANNEL_ID";
 
-const grid = document.getElementById("productGrid"),
-  searchInput = document.getElementById("searchInput"),
-  brandFilter = document.getElementById("brandFilter"),
-  categoryFilter = document.getElementById("categoryFilter"),
-  sortFilter = document.getElementById("sortFilter"),
-  productCount = document.getElementById("productCount"),
-  emptyState = document.getElementById("emptyState");
-
-const modal = document.getElementById("productModal"),
-  modalImage = document.getElementById("modalImage"),
-  prevImgBtn = document.getElementById("prevImgBtn"),
-  nextImgBtn = document.getElementById("nextImgBtn"),
-  modalThumbnails = document.getElementById("modalThumbnails"),
-  modalBrand = document.getElementById("modalBrand"),
-  modalCategory = document.getElementById("modalCategory"),
-  modalName = document.getElementById("modalName"),
-  modalPrice = document.getElementById("modalPrice"),
-  modalRef = document.getElementById("modalRef"),
-  copyRefButton = document.getElementById("copyRefButton"),
-  toast = document.getElementById("toast");
-
 let currentProduct = null;
 let currentImageIndex = 0;
-
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-["discordTop", "discordBottom", "modalDiscordButton"].forEach(id => {
-  const el = document.getElementById(id);
-  if (el) el.href = DISCORD_TICKET_URL;
-});
 
 function euro(v) {
   return new Intl.NumberFormat("en-GB", { style: "currency", currency: "EUR" }).format(v || 0);
@@ -58,7 +29,10 @@ function getProductImages(p) {
 }
 
 function populate() {
+  const brandFilter = document.getElementById("brandFilter");
+  const categoryFilter = document.getElementById("categoryFilter");
   const products = getProductsList();
+
   if (brandFilter) {
     brandFilter.innerHTML = '<option value="all">All brands</option>';
     unique(products.map(p => p.brand).filter(Boolean)).forEach(v => {
@@ -84,6 +58,11 @@ function populate() {
 
 function filtered() {
   const products = getProductsList();
+  const searchInput = document.getElementById("searchInput");
+  const brandFilter = document.getElementById("brandFilter");
+  const categoryFilter = document.getElementById("categoryFilter");
+  const sortFilter = document.getElementById("sortFilter");
+
   let q = searchInput ? searchInput.value.trim().toLowerCase() : "",
     b = brandFilter ? brandFilter.value : "all",
     c = categoryFilter ? categoryFilter.value : "all",
@@ -117,15 +96,22 @@ function esc(v) {
 }
 
 function render() {
+  const grid = document.getElementById("productGrid");
+  const productCount = document.getElementById("productCount");
+  const emptyState = document.getElementById("emptyState");
+
   if (!grid) return;
   let r = filtered();
   grid.innerHTML = "";
+
   if (productCount) {
     productCount.textContent = `${r.length} product${r.length === 1 ? "" : "s"}`;
   }
+
   if (emptyState) {
     emptyState.classList.toggle("hidden", r.length !== 0);
   }
+
   r.forEach(p => {
     let imgs = getProductImages(p);
     let mainImg = imgs[0];
@@ -158,11 +144,13 @@ function switchImage(index) {
 
   currentImageIndex = (index + imgs.length) % imgs.length;
   let newImgSrc = imgs[currentImageIndex];
+  const modalImage = document.getElementById("modalImage");
+  const modalThumbnails = document.getElementById("modalThumbnails");
+
   if (modalImage) {
     modalImage.src = newImgSrc;
   }
 
-  // Update active thumbnail
   if (modalThumbnails) {
     const thumbs = modalThumbnails.querySelectorAll(".thumb-btn");
     thumbs.forEach((btn, i) => {
@@ -172,12 +160,22 @@ function switchImage(index) {
 }
 
 function openModal(p) {
+  const modal = document.getElementById("productModal");
+  const modalImage = document.getElementById("modalImage");
+  const prevImgBtn = document.getElementById("prevImgBtn");
+  const nextImgBtn = document.getElementById("nextImgBtn");
+  const modalThumbnails = document.getElementById("modalThumbnails");
+  const modalBrand = document.getElementById("modalBrand");
+  const modalCategory = document.getElementById("modalCategory");
+  const modalName = document.getElementById("modalName");
+  const modalPrice = document.getElementById("modalPrice");
+  const modalRef = document.getElementById("modalRef");
+
   if (!modal) return;
   currentProduct = p;
   currentImageIndex = 0;
   let imgs = getProductImages(p);
 
-  // Set initial main image
   if (modalImage) {
     modalImage.src = imgs[0];
     modalImage.onerror = function() {
@@ -187,7 +185,6 @@ function openModal(p) {
     modalImage.alt = p.name || "";
   }
 
-  // Setup navigation arrows
   if (imgs.length > 1) {
     if (prevImgBtn) prevImgBtn.classList.remove("hidden");
     if (nextImgBtn) nextImgBtn.classList.remove("hidden");
@@ -196,7 +193,6 @@ function openModal(p) {
     if (nextImgBtn) nextImgBtn.classList.add("hidden");
   }
 
-  // Populate thumbnails
   if (modalThumbnails) {
     modalThumbnails.innerHTML = "";
     if (imgs.length > 1) {
@@ -226,6 +222,7 @@ function openModal(p) {
 }
 
 function closeModal() {
+  const modal = document.getElementById("productModal");
   if (!modal) return;
   modal.classList.add("hidden");
   modal.setAttribute("aria-hidden", "true");
@@ -234,6 +231,7 @@ function closeModal() {
 
 async function copyRef() {
   if (!currentProduct) return;
+  const toast = document.getElementById("toast");
   try {
     await navigator.clipboard.writeText(currentProduct.ref);
   } catch {
@@ -251,25 +249,42 @@ async function copyRef() {
   }
 }
 
-if (prevImgBtn) prevImgBtn.onclick = () => switchImage(currentImageIndex - 1);
-if (nextImgBtn) nextImgBtn.onclick = () => switchImage(currentImageIndex + 1);
-
-if (searchInput) searchInput.oninput = render;
-if (brandFilter) brandFilter.onchange = render;
-if (categoryFilter) categoryFilter.onchange = render;
-if (sortFilter) sortFilter.onchange = render;
-if (copyRefButton) copyRefButton.onclick = copyRef;
-
-document.querySelectorAll("[data-close-modal]").forEach(x => (x.onclick = closeModal));
-
-document.onkeydown = e => {
-  if (!modal || modal.classList.contains("hidden")) return;
-  if (e.key === "Escape") closeModal();
-  if (e.key === "ArrowLeft") switchImage(currentImageIndex - 1);
-  if (e.key === "ArrowRight") switchImage(currentImageIndex + 1);
-};
-
 function initApp() {
+  const searchInput = document.getElementById("searchInput");
+  const brandFilter = document.getElementById("brandFilter");
+  const categoryFilter = document.getElementById("categoryFilter");
+  const sortFilter = document.getElementById("sortFilter");
+  const copyRefButton = document.getElementById("copyRefButton");
+  const prevImgBtn = document.getElementById("prevImgBtn");
+  const nextImgBtn = document.getElementById("nextImgBtn");
+  const yearEl = document.getElementById("year");
+
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  ["discordTop", "discordBottom", "modalDiscordButton"].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.href = DISCORD_TICKET_URL;
+  });
+
+  if (prevImgBtn) prevImgBtn.onclick = () => switchImage(currentImageIndex - 1);
+  if (nextImgBtn) nextImgBtn.onclick = () => switchImage(currentImageIndex + 1);
+
+  if (searchInput) searchInput.oninput = render;
+  if (brandFilter) brandFilter.onchange = render;
+  if (categoryFilter) categoryFilter.onchange = render;
+  if (sortFilter) sortFilter.onchange = render;
+  if (copyRefButton) copyRefButton.onclick = copyRef;
+
+  document.querySelectorAll("[data-close-modal]").forEach(x => (x.onclick = closeModal));
+
+  document.onkeydown = e => {
+    const modal = document.getElementById("productModal");
+    if (!modal || modal.classList.contains("hidden")) return;
+    if (e.key === "Escape") closeModal();
+    if (e.key === "ArrowLeft") switchImage(currentImageIndex - 1);
+    if (e.key === "ArrowRight") switchImage(currentImageIndex + 1);
+  };
+
   populate();
   render();
 }
