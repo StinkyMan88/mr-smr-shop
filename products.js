@@ -10,8 +10,8 @@ const PRODUCTS = [
     name: "Dior B22",
     brand: "Dior",
     category: "Sneakers",
-    price: 59.90,
-    ref: "DIORB22-001",
+    price: 29.00,
+    ref: "smr-B22",
     images: [
       "assets/products/dior-b22.jpg",
       "assets/placeholder.svg"
