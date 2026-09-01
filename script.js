@@ -1,4 +1,4 @@
-const DISCORD_TICKET_URL="https://discord.com/channels/YOUR_SERVER_ID/YOUR_TICKET_CHANNEL_ID";
+const DISCORD_TICKET_URL="https://discord.gg/uVWn5Cwh3x";
 const grid=document.getElementById("productGrid"),searchInput=document.getElementById("searchInput"),brandFilter=document.getElementById("brandFilter"),categoryFilter=document.getElementById("categoryFilter"),sortFilter=document.getElementById("sortFilter"),productCount=document.getElementById("productCount"),emptyState=document.getElementById("emptyState");
 const modal=document.getElementById("productModal"),modalImage=document.getElementById("modalImage"),modalBrand=document.getElementById("modalBrand"),modalCategory=document.getElementById("modalCategory"),modalName=document.getElementById("modalName"),modalPrice=document.getElementById("modalPrice"),modalRef=document.getElementById("modalRef"),copyRefButton=document.getElementById("copyRefButton"),toast=document.getElementById("toast");
 let currentProduct=null;
