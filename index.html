@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="MR SMR SELLER product catalog">
+<title>MR SMR SELLER — Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header"><div class="header-inner">
+<a class="brand" href="./"><span class="brand-mark">M</span><span><strong>MR SMR</strong><small>SELLER</small></span></a>
+<nav class="nav"><a href="#catalog">Catalog</a><a href="#how-to-buy">How to buy</a><a id="discordTop" class="discord-link" href="#" target="_blank" rel="noopener">Discord ↗</a></nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="hero-inner"><span class="eyebrow">PRODUCT CATALOG</span>
+<h1>Find your next<br><span>pickup.</span></h1>
+<p>Browse the catalog, copy the product reference and open a ticket on Discord to order.</p>
+<a href="#catalog" class="hero-btn">Browse products ↓</a></div></section>
+
+<section id="catalog" class="catalog-section">
+<div class="section-head"><div><span class="eyebrow">CATALOG</span><h2>All products</h2></div><span id="productCount" class="count">0 products</span></div>
+<div class="controls">
+<label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products, brands, refs..." autocomplete="off"></label>
+<select id="brandFilter"><option value="all">All brands</option></select>
+<select id="categoryFilter"><option value="all">All categories</option></select>
+<select id="sortFilter"><option value="featured">Featured</option><option value="newest">Newest</option><option value="price-low">Price: low → high</option><option value="price-high">Price: high → low</option><option value="name">Name A → Z</option></select>
+</div>
+<div id="productGrid" class="product-grid"></div>
+<div id="emptyState" class="empty hidden"><div class="empty-icon">⌕</div><h3>No products found</h3><p>Try another search or remove one of the filters.</p></div>
+</section>
+
+<section id="how-to-buy" class="how-section"><div class="section-head"><div><span class="eyebrow">ORDERING</span><h2>How to buy</h2></div></div>
+<div class="steps">
+<article class="step"><span>01</span><h3>Choose a product</h3><p>Find the item you want and open its product card.</p></article>
+<article class="step"><span>02</span><h3>Copy the ref</h3><p>Copy the product reference shown on the product window.</p></article>
+<article class="step"><span>03</span><h3>Open a ticket</h3><p>Join our Discord and open a ticket. Send the reference, size, color and quantity.</p></article>
+</div></section>
+</main>
+
+<footer><div><strong>MR SMR SELLER</strong><span>© <span id="year"></span> — All rights reserved.</span></div><a id="discordBottom" href="#" target="_blank" rel="noopener">Join Discord ↗</a></footer>
+
+<div id="productModal" class="modal hidden" aria-hidden="true">
+<div class="modal-backdrop" data-close-modal></div>
+<div class="modal-card" role="dialog" aria-modal="true">
+<button class="modal-close" data-close-modal aria-label="Close">×</button>
+<div class="modal-image-wrap"><img id="modalImage" src="" alt=""></div>
+<div class="modal-info"><div class="modal-topline"><span id="modalBrand"></span><span id="modalCategory"></span></div>
+<h2 id="modalName"></h2><div class="modal-price" id="modalPrice"></div>
+<div class="ref-box"><div><small>PRODUCT REF</small><strong id="modalRef"></strong></div><button id="copyRefButton">Copy ref</button></div>
+<p class="modal-note">Copy the reference, then open a ticket on Discord to place your order.</p>
+<a id="modalDiscordButton" class="buy-button" href="#" target="_blank" rel="noopener">Copy ref & open Discord ticket ↗</a>
+</div></div></div>
+<div id="toast" class="toast">Reference copied!</div>
+<script src="products.js"></script><script src="script.js"></script>
+</body></html>
