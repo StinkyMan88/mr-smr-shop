@@ -327,7 +327,7 @@ var PRODUCTS = [
       "./crtzt7.webp",
       "./crtzt8.webp",
       "./crtzt9.webp",
-      "./crtzt10.webp
+      "./crtzt10.webp"
     ],
     featured: true,
     date: "2026-09-02"
