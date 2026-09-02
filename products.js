@@ -12,7 +12,7 @@ var PRODUCTS = [
     price: 29,
     ref: "smr-b22",
     images: [
-      "./assets/products/dior-black.png",
+      "./dior-black.png",
       "./assets/products/dior-black-reflective.png",
       "./assets/products/dior-gray.png",
       "./assets/products/dior-white.png"
