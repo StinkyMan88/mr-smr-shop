@@ -331,6 +331,24 @@ var PRODUCTS = [
     ],
     featured: true,
     date: "2026-09-02"
+  },
+  {
+    id: "gucci-cap-001",
+    name: "Gucci Cap",
+    brand: "Gucci",
+    category: "Accessories",
+    price: 10,
+    ref: "smr-ggpc",
+    images: [
+      "./ggpc1.webp",
+      "./ggpc2.webp",
+      "./ggpc3.webp",
+      "./ggpc4.webp",
+      "./ggpc5.webp",
+      "./ggpc6.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
   }
 ];
 
