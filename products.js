@@ -61,14 +61,20 @@ var PRODUCTS = [
     date: "2026-08-28"
   },
   {
-    id: "gucci-cap-001",
-    name: "GG Cap",
-    brand: "Gucci",
-    category: "Accessories",
-    price: 24.90,
-    ref: "GUCCICAP-001",
+    id: "bape-zipup-001",
+    name: "Bape Zip-Up",
+    brand: "Bape",
+    category: "Tops",
+    price: 27.00,
+    ref: "smr-BBAZU",
     images: [
-      "./gelnycblack.webp"
+      "./bapezip1.webp",
+      "./bapezip2.webp",
+      "./bapezip3.webp",
+      "./bapezip4.webp",
+      "./bapezip5.webp",
+      "./bapezip6.webp",
+      "./bapezip7.webp"
     ],
     featured: false,
     date: "2026-08-25"
