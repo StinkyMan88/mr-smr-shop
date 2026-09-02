@@ -94,6 +94,154 @@ var PRODUCTS = [
     ],
     featured: true,
     date: "2026-09-02"
+  },
+  {
+    id: "lv-skates-001",
+    name: "LV Skates (Normal)",
+    brand: "Louis Vuitton",
+    category: "Sneakers",
+    price: 37,
+    ref: "smr-lvs",
+    images: [
+      "./lvs1.webp",
+      "./lvs2.webp",
+      "./lvs3.webp",
+      "./lvs4.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
+  },
+  {
+    id: "lv-skates-002",
+    name: "LV Skates (Special)",
+    brand: "Louis Vuitton",
+    category: "Sneakers",
+    price: 40,
+    ref: "smr-lvsc",
+    images: [
+      "./lvsc1.webp",
+      "./lvsc2.webp",
+      "./lvsc3.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
+  },
+  {
+    id: "gg-rhytons-001",
+    name: "Gucci Rhytons",
+    brand: "Gucci",
+    category: "Sneakers",
+    price: 25,
+    ref: "smr-ggr",
+    images: [
+      "./ggr1.webp",
+      "./ggr2.webp",
+      "./ggr3.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
+  },
+  {
+    id: "on-cloudmonster3-001",
+    name: "On Cloudmonster 3",
+    brand: "On",
+    category: "Sneakers",
+    price: 33,
+    ref: "smr-ocm3",
+    images: [
+      "./oocm31.webp",
+      "./oocm32.webp",
+      "./oocm33.webp",
+      "./oocm34.webp",
+      "./oocm35.webp",
+      "./oocm36.webp",
+      "./oocm37.webp",
+      "./oocm38.webp",
+      "./oocm39.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
+  },
+  {
+    id: "adidas-yeezy-slides-001",
+    name: "Yeezy Slides",
+    brand: "Adidas",
+    category: "Sneakers",
+    price: 9,
+    ref: "smr-mbays",
+    images: [
+      "./mbays1.webp",
+      "./mbays2.webp",
+      "./mbays3.webp",
+      "./mbays4.webp",
+      "./mbays5.webp",
+      "./mbays6.webp",
+      "./mbays7.webp",
+      "./mbays8.webp",
+      "./mbays9.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
+  },
+  {
+    id: "bapesta-low-001",
+    name: "Bape Sta Low",
+    brand: "Bape",
+    category: "Sneakers",
+    price: 33,
+    ref: "smr-bbasl",
+    images: [
+      "./bbasl1.webp",
+      "./bbasl2.webp",
+      "./bbasl3.webp",
+      "./bbasl4.webp",
+      "./bbasl5.webp",
+      "./bbasl6.webp",
+      "./bbasl7.webp",
+      "./bbasl8.webp",
+      "./bbasl9.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
+  },
+  {
+    id: "balenciaba-track-led-001",
+    name: "Balenciaga Track LED (1:1 version)",
+    brand: "Balenciaga",
+    category: "Sneakers",
+    price: 59,
+    ref: "smr-bbtld1",
+    images: [
+      "./bbtld11.webp",
+      "./bbtld12.webp",
+      "./bbtld13.webp",
+      "./bbtld14.webp",
+      "./bbtld15.webp",
+      "./bbtld16.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
+  },
+  {
+    id: "numeris-atelier-001",
+    name: "Numeris Atelier",
+    brand: "Numeris",
+    category: "Sneakers",
+    price: 29,
+    ref: "smr-nsarb",
+    images: [
+      "./nsarb1.webp",
+      "./nsarb2.webp",
+      "./nsarb3.webp",
+      "./nsarb4.webp",
+      "./nsarb5.webp",
+      "./nsarb6.webp",
+      "./nsarb7.webp",
+      "./nsarb8.webp",
+      "./nsarb9.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
   }
 ];
 
