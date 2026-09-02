@@ -309,6 +309,28 @@ var PRODUCTS = [
     ],
     featured: true,
     date: "2026-09-02"
+  },
+  {
+    id: "corteiz-tee-001",
+    name: "Corteiz Tee",
+    brand: "Corteiz",
+    category: "T-Shirt",
+    price: 12,
+    ref: "smr-crtzt",
+    images: [
+      "./crtzt1.webp",
+      "./crtzt2.webp",
+      "./crtzt3.webp",
+      "./crtzt4.webp",
+      "./crtzt5.webp",
+      "./crtzt6.webp",
+      "./crtzt7.webp",
+      "./crtzt8.webp",
+      "./crtzt9.webp",
+      "./crtzt10.webp
+    ],
+    featured: true,
+    date: "2026-09-02"
   }
 ];
 
