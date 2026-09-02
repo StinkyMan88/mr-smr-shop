@@ -78,6 +78,22 @@ var PRODUCTS = [
     ],
     featured: false,
     date: "2026-08-25"
+  },
+  {
+    id: "dior-b30-001",
+    name: "Dior B30",
+    brand: "Dior",
+    category: "Sneakers",
+    price: 27,
+    ref: "smr-b30",
+    images: [
+      "./drb301.webp",
+      "./drb302.webp",
+      "./drb303.webp",
+      "./drb304.webp",
+    ],
+    featured: true,
+    date: "2026-09-02"
   }
 ];
 
