@@ -46,7 +46,7 @@ var PRODUCTS = [
     price: 34.90,
     ref: "NIKEP6000-001",
     images: [
-      "./assets/products/gelnycgray.webp"
+      "./gelnycgray.webp"
     ],
     featured: false,
     date: "2026-08-28"
@@ -59,7 +59,7 @@ var PRODUCTS = [
     price: 24.90,
     ref: "GUCCICAP-001",
     images: [
-      "./assets/products/gelnycblack.webp"
+      "./gelnycblack.webp"
     ],
     featured: false,
     date: "2026-08-25"
