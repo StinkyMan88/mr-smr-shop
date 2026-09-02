@@ -90,7 +90,7 @@ var PRODUCTS = [
       "./drb301.webp",
       "./drb302.webp",
       "./drb303.webp",
-      "./drb304.webp",
+      "./drb304.webp"
     ],
     featured: true,
     date: "2026-09-02"
