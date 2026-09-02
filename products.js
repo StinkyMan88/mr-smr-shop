@@ -13,27 +13,27 @@ var PRODUCTS = [
     ref: "smr-b22",
     images: [
       "./dior-black.png",
-      "./assets/products/dior-black-reflective.png",
-      "./assets/products/dior-gray.png",
-      "./assets/products/dior-white.png"
+      "./dior-black-reflective.png",
+      "./dior-gray.png",
+      "./dior-white.png"
     ],
     featured: true,
     date: "2026-09-01"
   },
   {
     id: "asics-gel-nyc-001",
-    name: "Gel-NYC",
-    brand: "ASICS",
+    name: "Asics Gel-NYC (1:1 version)",
+    brand: "Asics",
     category: "Sneakers",
-    price: 42.90,
-    ref: "ASICSNYC-001",
+    price: 45.00,
+    ref: "smr-ASGN11",
     images: [
-      "./assets/products/gelnycblack.webp",
-      "./assets/products/gelnycblue.webp",
-      "./assets/products/gelnycdarkgray.webp",
-      "./assets/products/gelnycgray.webp",
-      "./assets/products/gelnycgrayblack.webp",
-      "./assets/products/gelnycpink.webp"
+      "./gelnycblack.webp",
+      "./gelnycblue.webp",
+      "./gelnycdarkgray.webp",
+      "./gelnycgray.webp",
+      "./gelnycgrayblack.webp",
+      "./gelnycpink.webp"
     ],
     featured: true,
     date: "2026-08-30"
