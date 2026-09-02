@@ -40,13 +40,22 @@ var PRODUCTS = [
   },
   {
     id: "nike-p6000-001",
-    name: "P-6000",
+    name: "Nike P-6000",
     brand: "Nike",
     category: "Sneakers",
-    price: 34.90,
-    ref: "NIKEP6000-001",
+    price: 33.00,
+    ref: "smr-NKP6K",
     images: [
-      "./gelnycgray.webp"
+      "./p6001.webp",
+      "./p6002.webp",
+      "./p6003.webp",
+      "./p6004.webp",
+      "./p6005.webp",
+      "./p6006.webp",
+      "./p6007.webp",
+      "./p6008.webp",
+      "./p6009.webp",
+      "./p6010.webp"
     ],
     featured: false,
     date: "2026-08-28"
