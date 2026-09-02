@@ -199,7 +199,8 @@ var PRODUCTS = [
       "./bbasl6.webp",
       "./bbasl7.webp",
       "./bbasl8.webp",
-      "./bbasl9.webp"
+      "./bbasl9.webp",
+      "./bbasl10.webp"
     ],
     featured: true,
     date: "2026-09-02"
@@ -238,7 +239,73 @@ var PRODUCTS = [
       "./nsarb6.webp",
       "./nsarb7.webp",
       "./nsarb8.webp",
-      "./nsarb9.webp"
+      "./nsarb9.webp",
+      "./nsarb10.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
+  },
+  {
+    id: "nike-tn-001",
+    name: "Nike Air Max TN",
+    brand: "Nike",
+    category: "Sneakers",
+    price: 27,
+    ref: "smr-nkamtn",
+    images: [
+      "./nkamtn1.webp",
+      "./nkamtn2.webp",
+      "./nkamtn3.webp",
+      "./nkamtn4.webp",
+      "./nkamtn5.webp",
+      "./nkamtn6.webp",
+      "./nkamtn7.webp",
+      "./nkamtn8.webp",
+      "./nkamtn9.webp",
+      "./nkamtn10.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
+  },
+  {
+    id: "lv-trainers-001",
+    name: "LV Trainers",
+    brand: "Louis Vuitton",
+    category: "Sneakers",
+    price: 35,
+    ref: "smr-lvtrs",
+    images: [
+      "./lvtrs1.webp",
+      "./lvtrs2.webp",
+      "./lvtrs3.webp",
+      "./lvtrs4.webp",
+      "./lvtrs5.webp",
+      "./lvtrs6.webp",
+      "./lvtrs7.webp",
+      "./lvtrs8.webp",
+      "./lvtrs9.webp",
+      "./lvtrs10.webp"
+    ],
+    featured: true,
+    date: "2026-09-02"
+  },
+  {
+    id: "asics-kayano14-001",
+    name: "Asics Gel-Kayano 14",
+    brand: "Asics",
+    category: "Sneakers",
+    price: 32,
+    ref: "smr-asgk14",
+    images: [
+      "./asgk141.webp",
+      "./asgk142.webp",
+      "./asgk143.webp",
+      "./asgk144.webp",
+      "./asgk145.webp",
+      "./asgk146.webp",
+      "./asgk147.webp",
+      "./asgk148.webp",
+      "./asgk149.webp"
     ],
     featured: true,
     date: "2026-09-02"
