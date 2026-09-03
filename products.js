@@ -1,8 +1,3 @@
-// ADD PRODUCTS HERE.
-// Each product can have:
-// - images: ["./assets/products/image1.png", "./assets/products/image2.png", ...] (First image is primary)
-// - OR image: "./assets/products/image1.png" (for single image)
-
 var PRODUCTS = [
   {
     id: "dior-b22-001",
@@ -11,15 +6,22 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 29,
     ref: "smr-b22",
+
     images: [
       "./dior-black.png",
       "./dior-black-reflective.png",
       "./dior-gray.png",
       "./dior-white.png"
     ],
+
+    qc: [
+      "./dior-black.png",
+    ],
+
     featured: true,
     date: "2026-09-01"
   },
+
   {
     id: "asics-gel-nyc-001",
     name: "Asics Gel-NYC (1:1 version)",
@@ -27,6 +29,7 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 45.00,
     ref: "smr-ASGN11",
+
     images: [
       "./gelnycblack.webp",
       "./gelnycblue.webp",
@@ -35,9 +38,14 @@ var PRODUCTS = [
       "./gelnycgrayblack.webp",
       "./gelnycpink.webp"
     ],
+
+    qc: [
+    ],
+
     featured: true,
     date: "2026-08-30"
   },
+
   {
     id: "nike-p6000-001",
     name: "Nike P-6000",
@@ -45,6 +53,7 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 33.00,
     ref: "smr-NKP6K",
+
     images: [
       "./p6001.webp",
       "./p6002.webp",
@@ -57,9 +66,13 @@ var PRODUCTS = [
       "./p6009.webp",
       "./p6010.webp"
     ],
+
+    qc: [],
+
     featured: false,
     date: "2026-08-28"
   },
+
   {
     id: "bape-zipup-001",
     name: "Bape Zip-Up",
@@ -67,6 +80,7 @@ var PRODUCTS = [
     category: "Tops",
     price: 27.00,
     ref: "smr-BBAZU",
+
     images: [
       "./bapezip1.webp",
       "./bapezip2.webp",
@@ -76,9 +90,13 @@ var PRODUCTS = [
       "./bapezip6.webp",
       "./bapezip7.webp"
     ],
+
+    qc: [],
+
     featured: false,
     date: "2026-08-25"
   },
+
   {
     id: "dior-b30-001",
     name: "Dior B30",
@@ -86,15 +104,20 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 27,
     ref: "smr-b30",
+
     images: [
       "./drb301.webp",
       "./drb302.webp",
       "./drb303.webp",
       "./drb304.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "lv-skates-001",
     name: "LV Skates (Normal)",
@@ -102,15 +125,20 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 37,
     ref: "smr-lvs",
+
     images: [
       "./lvs1.webp",
       "./lvs2.webp",
       "./lvs3.webp",
       "./lvs4.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "lv-skates-002",
     name: "LV Skates (Special)",
@@ -118,14 +146,19 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 40,
     ref: "smr-lvsc",
+
     images: [
       "./lvsc1.webp",
       "./lvsc2.webp",
       "./lvsc3.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "gg-rhytons-001",
     name: "Gucci Rhytons",
@@ -133,14 +166,19 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 25,
     ref: "smr-ggr",
+
     images: [
       "./ggr1.webp",
       "./ggr2.webp",
       "./ggr3.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "on-cloudmonster3-001",
     name: "On Cloudmonster 3",
@@ -148,6 +186,7 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 33,
     ref: "smr-ocm3",
+
     images: [
       "./oocm31.webp",
       "./oocm32.webp",
@@ -159,9 +198,13 @@ var PRODUCTS = [
       "./oocm38.webp",
       "./oocm39.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "adidas-yeezy-slides-001",
     name: "Yeezy Slides",
@@ -169,6 +212,7 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 9,
     ref: "smr-mbays",
+
     images: [
       "./mbays1.webp",
       "./mbays2.webp",
@@ -180,9 +224,13 @@ var PRODUCTS = [
       "./mbays8.webp",
       "./mbays9.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "bapesta-low-001",
     name: "Bape Sta Low",
@@ -190,6 +238,7 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 33,
     ref: "smr-bbasl",
+
     images: [
       "./bbasl1.webp",
       "./bbasl2.webp",
@@ -202,9 +251,13 @@ var PRODUCTS = [
       "./bbasl9.webp",
       "./bbasl10.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "balenciaba-track-led-001",
     name: "Balenciaga Track LED (1:1 version)",
@@ -212,6 +265,7 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 59,
     ref: "smr-bbtld1",
+
     images: [
       "./bbtld11.webp",
       "./bbtld12.webp",
@@ -220,9 +274,13 @@ var PRODUCTS = [
       "./bbtld15.webp",
       "./bbtld16.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "numeris-atelier-001",
     name: "Numeris Atelier",
@@ -230,6 +288,7 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 29,
     ref: "smr-nsarb",
+
     images: [
       "./nsarb1.webp",
       "./nsarb2.webp",
@@ -242,9 +301,13 @@ var PRODUCTS = [
       "./nsarb9.webp",
       "./nsarb10.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "nike-tn-001",
     name: "Nike Air Max TN",
@@ -252,6 +315,7 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 27,
     ref: "smr-nkamtn",
+
     images: [
       "./nkamtn1.webp",
       "./nkamtn2.webp",
@@ -264,9 +328,13 @@ var PRODUCTS = [
       "./nkamtn9.webp",
       "./nkamtn10.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "lv-trainers-001",
     name: "LV Trainers",
@@ -274,6 +342,7 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 35,
     ref: "smr-lvtrs",
+
     images: [
       "./lvtrs1.webp",
       "./lvtrs2.webp",
@@ -286,9 +355,13 @@ var PRODUCTS = [
       "./lvtrs9.webp",
       "./lvtrs10.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "asics-kayano14-001",
     name: "Asics Gel-Kayano 14",
@@ -296,6 +369,7 @@ var PRODUCTS = [
     category: "Sneakers",
     price: 32,
     ref: "smr-asgk14",
+
     images: [
       "./asgk141.webp",
       "./asgk142.webp",
@@ -307,9 +381,13 @@ var PRODUCTS = [
       "./asgk148.webp",
       "./asgk149.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "corteiz-tee-001",
     name: "Corteiz Tee",
@@ -317,6 +395,7 @@ var PRODUCTS = [
     category: "T-Shirt",
     price: 12,
     ref: "smr-crtzt",
+
     images: [
       "./crtzt1.webp",
       "./crtzt2.webp",
@@ -329,9 +408,13 @@ var PRODUCTS = [
       "./crtzt9.webp",
       "./crtzt10.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   },
+
   {
     id: "gucci-cap-001",
     name: "Gucci Cap",
@@ -339,6 +422,7 @@ var PRODUCTS = [
     category: "Accessories",
     price: 10,
     ref: "smr-ggpc",
+
     images: [
       "./ggpc1.webp",
       "./ggpc2.webp",
@@ -347,10 +431,14 @@ var PRODUCTS = [
       "./ggpc5.webp",
       "./ggpc6.webp"
     ],
+
+    qc: [],
+
     featured: true,
     date: "2026-09-02"
   }
 ];
+
 
 if (typeof window !== "undefined") {
   window.PRODUCTS = PRODUCTS;
