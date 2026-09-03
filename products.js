@@ -16,6 +16,7 @@ var PRODUCTS = [
 
     qc: [
       "./dior-black.png",
+      "./dior-black-reflective.png"
     ],
 
     featured: true,
