@@ -46,20 +46,42 @@
 <div class="modal-backdrop" data-close-modal></div>
 <div class="modal-card" role="dialog" aria-modal="true">
 <button class="modal-close" data-close-modal aria-label="Close">×</button>
+
 <div class="modal-gallery">
-<div class="modal-image-wrap">
-  <button id="prevImgBtn" class="gallery-arrow prev hidden" aria-label="Previous image">‹</button>
-  <img id="modalImage" src="" alt="">
-  <button id="nextImgBtn" class="gallery-arrow next hidden" aria-label="Next image">›</button>
+  <div class="modal-image-wrap">
+    <button id="prevImgBtn" class="gallery-arrow prev hidden" aria-label="Previous image">‹</button>
+    <img id="modalImage" src="" alt="">
+    <button id="nextImgBtn" class="gallery-arrow next hidden" aria-label="Next image">›</button>
+  </div>
+  <div id="modalThumbnails" class="modal-thumbnails hidden"></div>
+
+  <div id="qcSection" class="qc-section hidden">
+    <div class="qc-header">
+      <div>
+        <span class="eyebrow">QUALITY CHECK</span>
+        <h3>QC Photos</h3>
+      </div>
+      <span id="qcCount" class="qc-count"></span>
+    </div>
+
+    <div class="qc-image-wrap">
+      <button id="prevQcBtn" class="gallery-arrow prev hidden" aria-label="Previous QC photo">‹</button>
+      <img id="qcImage" src="" alt="">
+      <button id="nextQcBtn" class="gallery-arrow next hidden" aria-label="Next QC photo">›</button>
+    </div>
+
+    <div id="qcThumbnails" class="modal-thumbnails hidden"></div>
+  </div>
 </div>
-<div id="modalThumbnails" class="modal-thumbnails hidden"></div>
-</div>
+
 <div class="modal-info"><div class="modal-topline"><span id="modalBrand"></span><span id="modalCategory"></span></div>
 <h2 id="modalName"></h2><div class="modal-price" id="modalPrice"></div>
 <div class="ref-box"><div><small>PRODUCT REF</small><strong id="modalRef"></strong></div><button id="copyRefButton">Copy ref</button></div>
 <p class="modal-note">Copy the reference, then open a ticket on Discord to place your order.</p>
 <a id="modalDiscordButton" class="buy-button" href="#" target="_blank" rel="noopener">Copy ref & open Discord ticket ↗</a>
 </div></div></div>
+
 <div id="toast" class="toast">Reference copied!</div>
 <script src="products.js"></script><script src="script.js"></script>
-</body></html>
+</body>
+</html>
